@@ -1,0 +1,20 @@
+service: sls-playground 
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+
+plugins:
+  localPath: '../../MyGit'
+  modules:
+    - serverless-plugin-shadow-cljs
+    - serverless-offline
+
+functions:
+  ping:
+    handler: shadow.ping
+    events:
+      - http:
+          path: ping
+          method: get

@@ -1,0 +1,13 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :builds
+ {:serverless
+  {:target :node-library
+   :output-to "shadow.js"
+   :exports-fn play.core/exports}
+  :repl
+  {:target :node-script
+   :output-to "target/shadow.js"
+   :main play.core/repl}}}

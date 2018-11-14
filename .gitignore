@@ -1,0 +1,15 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.envrc
+
+node_modules/
+target/
+package-lock.json
+.DS_Store
+*/.DS_Store
+.shadow-cljs
